@@ -100,9 +100,9 @@
                             <li><i class="fa fa-calendar-o"></i> {{ Blog.created_on }}</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="{% url 'eco:blogdetails' Blog.categories Blog.id %}">{{ Blog.title }}</a></h5>
+                        <h5><a href="{% url 'blog:blogdetails' Blog.categories Blog.id %}">{{ Blog.title }}</a></h5>
                         <p>{{ Blog.content  | slice:":150" }}</p>
-                        <a href="{% url 'eco:blogdetails' Blog.categories Blog.id %}" class="blog__btn">READ MORE <span
+                        <a href="{% url 'blog:blogdetails' Blog.categories Blog.id %}" class="blog__btn">READ MORE <span
                             class="arrow_right"></span></a>
                     </div>
                 </div>

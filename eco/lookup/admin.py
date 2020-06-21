@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import banner, product, siteInfo, blogPost
+from . models import banner, product, siteInfo
 
 admin.site.register(banner)
 
@@ -11,10 +11,3 @@ class ProductPost(admin.ModelAdmin):
     search_fields = ['productName', 'productCategories','productPrice']
 admin.site.register(product, ProductPost)
 
-
-class PostAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'author','blogImg', 'status','created_on','content')
-    list_filter = ("categories",)
-    search_fields = ['title', 'content']
-    
-admin.site.register(blogPost, PostAdmin)
